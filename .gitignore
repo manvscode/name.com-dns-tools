@@ -1,0 +1,4 @@
+bin/*
+extern/*
+src/*.o
+api.py
