@@ -4,6 +4,13 @@ DNS tools for name.com is a DNS record management utility (the _namecom_dns_ com
 
 ----------
 
+## Donate, if you found this tool useful
+
+The development of these utilities took numerous hours of development and testing.  If you found that they
+are useful to you, then please consider making a donation of bitcoin to: ```1Bmmq4Rp2FbW9ApfEe2MzrPfyPx6jEtURk```
+
+All donations help cover maintenance costs.
+
 ## Building from Source
 1. Clone the source from: ```git clone git@bitbucket.org:manvscode/name.com-dns-tools.git```
 2. Build the source: ```make```
