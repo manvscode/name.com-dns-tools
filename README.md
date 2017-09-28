@@ -122,7 +122,9 @@ Record updated.
 
 License
 -------------
-This software is released under an MIT license so you may freely use it for commercial purposes.  However, please consider making a donation of Bitcoin to 1KqAi9N2AjUBySQkMBf8XVboNfoZGpHsV if you do find it useful.
+This software is released under an MIT license so you may freely use it for commercial purposes.  However,
+please consider making a donation of Bitcoin to ```1Bmmq4Rp2FbW9ApfEe2MzrPfyPx6jEtURk``` if you do find
+it useful.
 
 > Copyright (C) 2016 by Joseph A. Marrero. http://www.joemarrero.com/
 > 
