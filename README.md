@@ -7,7 +7,7 @@ DNS tools for name.com is a DNS record management utility (the _namecom_dns_ com
 ## Donate, if you found this tool useful
 
 The development of these utilities took numerous hours of development and testing.  If you found that they
-are useful to you, then please consider making a donation of bitcoin to: ```1Bmmq4Rp2FbW9ApfEe2MzrPfyPx6jEtURk```
+are useful to you, then please consider making a [donation of bitcoin.](https://bitpay.com/cart/add?itemId=MkFQg3nj178sM7B2xJdjCf)
 
 All donations help cover maintenance costs.
 
@@ -123,8 +123,8 @@ Record updated.
 License
 -------------
 This software is released under an MIT license so you may freely use it for commercial purposes.  However,
-please consider making a donation of Bitcoin to ```1Bmmq4Rp2FbW9ApfEe2MzrPfyPx6jEtURk``` if you do find
-it useful.
+please consider making a [donation of Bitcoin](https://bitpay.com/cart/add?itemId=MkFQg3nj178sM7B2xJdjCf)
+if you do find it useful.
 
 > Copyright (C) 2016 by Joseph A. Marrero. http://www.joemarrero.com/
 > 
