@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 by Joseph A. Marrero. http://www.joemarrero.com/
+ * Copyright (C) 2016 by Joseph A. Marrero. http://joemarrero.com/
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -333,7 +333,7 @@ void about( int argc, char* argv[] )
 	banner( );
 	printf( "----------------------------------------------------\n");
 	printf( "        Copyright (c) 2016, Joe Marrero.\n");
-	printf( "           http://www.joemarrero.com/\n");
+	printf( "             http://joemarrero.com/\n");
 	printf( "\n" );
 
 	printf( "Usage:\n" );

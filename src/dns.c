@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 by Joseph A. Marrero. http://www.joemarrero.com/
+ * Copyright (C) 2016 by Joseph A. Marrero. http://joemarrero.com/
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -312,6 +312,38 @@ int main( int argc, char* argv[] )
 					}
 				}
 
+#if 1
+				// header
+				printf("\u250c");
+				for(int i = 0; i < (39 + max_fqdn_len + max_content_len); i++ )
+				{
+					printf("\u2500");
+				}
+				printf("\u2510\n");
+				printf("\u2502 %5s  %-*s  %-*s  %5s  %-19s \u2502\n", "Type", max_fqdn_len, "Host", max_content_len, "Answer", "TTL", "Created");
+
+				// divider
+				printf("\u251c");
+				for(int i = 0; i < (39 + max_fqdn_len + max_content_len); i++ )
+				{
+					printf("\u2500");
+				}
+				printf("\u2524\n");
+
+				for( int i = 0; i < lc_vector_size(records); i++ )
+				{
+					namecom_api_dns_record_t* r = records[ i ];
+					printf("\u2502 %5s  %-*s  %-*s  %5d  %-19s \u2502\n", r->type, max_fqdn_len, r->fqdn, max_content_len, r->content, r->ttl, r->create_date);
+				}
+
+				// footer
+				printf("\u2514");
+				for(int i = 0; i < (39 + max_fqdn_len + max_content_len); i++ )
+				{
+					printf("\u2500");
+				}
+				printf("\u2518\n");
+#else
 				char fqdn_border[ max_fqdn_len + 1 ];
 				memset(fqdn_border, '-', sizeof(fqdn_border));
 				fqdn_border[ sizeof(fqdn_border) - 1 ] = '\0';
@@ -329,6 +361,7 @@ int main( int argc, char* argv[] )
 					printf("| %5s  %-*s  %-*s  %5d  %-19s |\n", r->type, max_fqdn_len, r->fqdn, max_content_len, r->content, r->ttl, r->create_date);
 				}
 				printf("+-%5s--%-*s--%-*s--%5s--%19s-+\n", "-----", max_fqdn_len, fqdn_border, max_content_len, content_border, "-----", "-------------------");
+#endif
 				break;
 			}
 			case COMMAND_SET:
@@ -470,7 +503,7 @@ void about( int argc, char* argv[] )
 	banner( );
 	printf( "----------------------------------------------------\n");
 	printf( "        Copyright (c) 2016, Joe Marrero.\n");
-	printf( "           http://www.joemarrero.com/\n");
+	printf( "             http://joemarrero.com/\n");
 	printf( "\n" );
 
 	printf( "Example Usage:\n" );
