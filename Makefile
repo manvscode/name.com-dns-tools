@@ -20,8 +20,8 @@
 #  THE SOFTWARE.
 #
 
-#CFLAGS = -O0 -g -D_POSIX_C_SOURCE -I /usr/local/include -I extern/include/
-CFLAGS = -std=c99 -O2 -D_POSIX_C_SOURCE -I /usr/local/include -I extern/include/
+#CFLAGS = -O0 -g -Wall -fsanitize=undefined -D_POSIX_C_SOURCE -I /usr/local/include -I extern/include/
+CFLAGS = -std=c99 -O2 -Wall -fsanitize=undefined -D_POSIX_C_SOURCE -I /usr/local/include -I extern/include/
 LDFLAGS = extern/lib/libutility.a extern/lib/libcollections.a extern/lib/libjansson.a -L /usr/local/lib -L extern/lib/ -lcurl
 CWD = $(shell pwd)
 
