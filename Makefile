@@ -21,7 +21,7 @@
 #
 
 #CFLAGS = -O0 -g -Wall -fsanitize=undefined -D_POSIX_C_SOURCE -I /usr/local/include -I extern/include/
-CFLAGS = -std=c99 -O2 -Wall -fsanitize=undefined -D_POSIX_C_SOURCE -I /usr/local/include -I extern/include/
+CFLAGS = -std=c99 -O2 -Wall -fsanitize=undefined -D_POSIX_C_SOURCE -I /usr/local/include -I extern/include -I extern/include/collections-1.0.0/ -I extern/include/utility-1.0.0/
 LDFLAGS = extern/lib/libutility.a extern/lib/libcollections.a extern/lib/libjansson.a -L /usr/local/lib -L extern/lib/ -lcurl
 CWD = $(shell pwd)
 

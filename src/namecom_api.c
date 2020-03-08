@@ -26,8 +26,8 @@
 #include <curl/curl.h>
 #include "namecom_api.h"
 #include <jansson.h>
-#include <libutility/utility.h>
-#include <libcollections/vector.h>
+#include <utility.h>
+#include <collections/vector.h>
 
 #define NAMECOM_API_SERVER_DEV    "api.dev.name.com"
 #define NAMECOM_API_SERVER_REL    "api.name.com"

@@ -24,9 +24,9 @@
 #include <string.h>
 #include <unistd.h>
 #include <curl/curl.h>
-#include <libutility/utility.h>
-#include <libutility/console.h>
-#include <libcollections/vector.h>
+#include <utility.h>
+#include <console.h>
+#include <collections/vector.h>
 #include "namecom_api.h"
 
 #define VERSION  "1.0"
@@ -535,7 +535,7 @@ void about( int argc, char* argv[] )
 	printf( "If you found this utility useful, please consider making a donation\n" );
 	printf( "of bitcoin to: " );
 	console_fg_color_256( stdout, CONSOLE_COLOR256_MAGENTA );
-	printf( "1Bmmq4Rp2FbW9ApfEe2MzrPfyPx6jEtURk" );
+	printf( "manvscode@gmail.com" );
 	console_reset( stdout );
 	printf( "\n\n" );
 	printf( "All donations help cover maintenance costs and are much appreciated.\n" );
