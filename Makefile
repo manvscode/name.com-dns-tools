@@ -21,8 +21,8 @@
 #
 
 #CFLAGS = -O0 -g -Wall -fsanitize=undefined -D_POSIX_C_SOURCE -I /usr/local/include -I extern/include/
-CFLAGS = -std=c99 -O2 -Wall -fsanitize=undefined -D_POSIX_C_SOURCE -I /usr/local/include -I extern/include -I extern/include/collections-1.0.0/ -I extern/include/utility-1.0.0/
-LDFLAGS = extern/lib/libutility.a extern/lib/libcollections.a extern/lib/libjansson.a -L /usr/local/lib -L extern/lib/ -lcurl
+CFLAGS = -std=c99 -O2 -Wall -fsanitize=undefined -D_POSIX_C_SOURCE -I /usr/local/include -I extern/include -I extern/include/collections-1.0.0/ -I extern/include/xtd-1.0.0/
+LDFLAGS = extern/lib/libxtd.a extern/lib/libcollections.a extern/lib/libjansson.a -L /usr/local/lib -L extern/lib/ -lcurl
 CWD = $(shell pwd)
 
 # Dynamic DNS tool.
@@ -33,7 +33,7 @@ DYNDNS_SOURCES = src/dyndns.c src/ipify.c src/namecom_api.c
 DNS_BIN = namecom_dns
 DNS_SOURCES = src/dns.c src/namecom_api.c
 
-all: extern/libutility \
+all: extern/libxtd \
 	 extern/libcollections \
 	 extern/libjansson \
 	 bin/$(DYNDNS_BIN) \
@@ -58,10 +58,10 @@ src/%.o: src/%.c
 #################################################
 # Dependencies                                  #
 #################################################
-extern/libutility:
-	@mkdir -p extern/libutility/
-	@git clone https://bitbucket.org/manvscode/libutility.git extern/libutility/
-	@cd extern/libutility && autoreconf -i && ./configure --libdir=$(CWD)/extern/lib/ --includedir=$(CWD)/extern/include/ && make && make install
+extern/libxtd:
+	@mkdir -p extern/libxtd/
+	@git clone https://bitbucket.org/manvscode/libxtd.git extern/libxtd/
+	@cd extern/libxtd && autoreconf -i && ./configure --libdir=$(CWD)/extern/lib/ --includedir=$(CWD)/extern/include/ && make && make install
 
 extern/libcollections:
 	@mkdir -p extern/libcollections/
@@ -72,8 +72,6 @@ extern/libjansson:
 	@mkdir -p extern/libjansson/
 	@git clone https://github.com/akheron/jansson extern/libjansson
 	@cd extern/libjansson && autoreconf -i && ./configure --libdir=$(CWD)/extern/lib/ --includedir=$(CWD)/extern/include/ && make && make install
-
-
 
 #################################################
 # Cleaning                                      #

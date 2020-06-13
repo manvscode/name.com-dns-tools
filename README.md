@@ -1,19 +1,38 @@
 # DNS Tools for Name.com
-
 DNS tools for name.com is a DNS record management utility (the _namecom_dns_ command) and a dynamic DNS client (the _namecom_dyndns_ command).
-
-----------
 
 ## Donate, if you found this tool useful
 
 The development of these utilities took numerous hours of development and testing.  If you found that they
-are useful to you, then please consider making a [donation of bitcoin.](https://bitpay.com/cart/add?itemId=MkFQg3nj178sM7B2xJdjCf)
+are useful to you, then please consider making a donation of bitcoin to **3A5M1m2BNSBgo9V7B8wf6VtWQDMMgp5abZ**
 
 All donations help cover maintenance costs.
 
-## Building from Source
-1. Clone the source from: ```git clone git@bitbucket.org:manvscode/name.com-dns-tools.git```
-2. Build the source: ```make```
+## Build Instructions
+
+### Ubuntu
+1. Install dependencies:
+```shell
+apt install -y autoconf automake libtool
+```
+2. Build source code by running:
+```shell
+make
+```
+
+### Mac OS X
+1. Install [HomeBrew](http://brew.sh/) by running:
+```shell
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+2. Install dependencies:
+```shell
+brew install automake autoconf libtool
+```
+3. Build source code by running:
+```shell
+make
+```
 
 ## DNS Record Management
 
@@ -116,33 +135,25 @@ $ namecom_dyndns --host test.unitserver.com --ip-address 10.0.0.1
 Record updated.
 ```
 
-----------
+# License
 
+	Copyright (C) 2016 by Joseph A. Marrero. http://www.joemarrero.com/
 
+	Permission is hereby granted, free of charge, to any person obtaining a copy
+	of this software and associated documentation files (the "Software"), to deal
+	in the Software without restriction, including without limitation the rights
+	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	copies of the Software, and to permit persons to whom the Software is
+	furnished to do so, subject to the following conditions:
 
-License
--------------
-This software is released under an MIT license so you may freely use it for commercial purposes.  However,
-please consider making a [donation of Bitcoin](https://bitpay.com/cart/add?itemId=MkFQg3nj178sM7B2xJdjCf)
-if you do find it useful.
+	The above copyright notice and this permission notice shall be included in
+	all copies or substantial portions of the Software.
 
-> Copyright (C) 2016 by Joseph A. Marrero. http://www.joemarrero.com/
-> 
-> Permission is hereby granted, free of charge, to any person obtaining a copy
-> of this software and associated documentation files (the "Software"), to deal
-> in the Software without restriction, including without limitation the rights
-> to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-> copies of the Software, and to permit persons to whom the Software is
-> furnished to do so, subject to the following conditions:
-> 
-> The above copyright notice and this permission notice shall be included in
-> all copies or substantial portions of the Software.
->   
-> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-> IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-> FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-> AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-> LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-> OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-> THE SOFTWARE.
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+	THE SOFTWARE.
 
