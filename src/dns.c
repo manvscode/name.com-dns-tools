@@ -532,10 +532,10 @@ void about( int argc, char* argv[] )
 	console_reset( stdout );
 	printf( "\n\n" );
 
-	printf( "If you found this utility useful, please consider making a donation\n" );
-	printf( "of bitcoin to: " );
+	printf( "If you found this utility useful, please consider becoming a \n" );
+	printf( "sponsor at: " );
 	console_fg_color_8( stdout, CONSOLE_COLOR8_BRIGHT_MAGENTA );
-	printf( "3A5M1m2BNSBgo9V7B8wf6VtWQDMMgp5abZ" );
+	printf( "https://github.com/sponsors/manvscode" );
 	console_reset( stdout );
 	printf( "\n\n" );
 	printf( "All donations help cover maintenance costs and are much appreciated.\n" );
