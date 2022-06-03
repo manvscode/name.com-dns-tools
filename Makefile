@@ -73,6 +73,7 @@ ifeq ($(OS),unix)
 	CFLAGS += -fsanitize=undefined
 	LDFLAGS += -L$(CWD)/extern/lib/ \
 			   -L/usr/local/lib \
+			   -lopenssl \
 			   -lcurl \
 			   -ljansson \
 			   -lxtd \
@@ -86,6 +87,7 @@ ifeq ($(OS),windows-x86)
 	HOST=i686-w64-mingw32
 	CFLAGS += -D_POSIX -mconsole
 	LDFLAGS += -Wl,-no-undefined -L$(CWD)/extern/lib/ -L/usr/i686-w64-mingw32/lib/ \
+			   -lopenssl \
 			   -lcurl \
 			   -ljansson \
 			   -lxtd \
@@ -110,6 +112,7 @@ ifeq ($(OS),windows-x86_64)
 	HOST=x86_64-w64-mingw32
 	CFLAGS += -D_POSIX -mconsole
 	LDFLAGS += -Wl,-no-undefined -L$(CWD)/extern/lib/ -L/usr/x86_64-w64-mingw32/lib/ \
+			   -lopenssl \
 			   -lcurl \
 			   -ljansson \
 			   -lxtd \
@@ -131,6 +134,8 @@ endif
 all: extern/libxtd \
 	 extern/libcollections \
 	 extern/libjansson \
+	 extern/libopenssl \
+	 extern/libcurl \
 	 bin/$(DYNDNS_BIN) \
 	 bin/$(DNS_BIN)
 
@@ -191,6 +196,53 @@ extern/libjansson:
 		            --includedir=$(CWD)/extern/include/ \
 		            --disable-shared \
 		            --enable-static \
+		            --host=$(HOST) && \
+		make && \
+		make install
+
+
+extern/libopenssl:
+	@mkdir -p extern/libopenssl/
+	@git clone https://github.com/openssl/openssl.git extern/libopenssl
+	@cd extern/libopenssl && \
+		autoreconf -i && \
+		PKG_CONFIG_LIBDIR=$(CWD)/extern/lib/pkgconfig \
+		./configure --libdir=$(CWD)/extern/lib/ \
+		            --includedir=$(CWD)/extern/include/ \
+		            --disable-shared \
+		            --enable-static \
+		            --host=$(HOST) && \
+		make && \
+		make install
+
+
+
+# We intend to statically link with a leaner version of curl.
+# This is primarily for the windows x86 and x86_64 builds.
+extern/libcurl: extern/libopenssl
+	@mkdir -p extern/libcurl/
+	@git clone https://github.com/curl/curl.git extern/libcurl
+	@cd extern/libcurl && \
+		autoreconf -i && \
+		PKG_CONFIG_LIBDIR=$(CWD)/extern/lib/pkgconfig \
+		./configure --libdir=$(CWD)/extern/lib/ \
+		            --includedir=$(CWD)/extern/include/ \
+		            --disable-shared \
+		            --enable-static \
+		            --with-openssl \
+		            --disable-ftp \
+		            --disable-ldap \
+		            --disable-ldaps \
+		            --disable-rtsp \
+		            --disable-proxy \
+		            --disable-telnet \
+		            --disable-tftp \
+		            --disable-pop3 \
+		            --disable-imap \
+		            --disable-smb \
+		            --disable-smtp \
+		            --disable-gopher \
+		            --disable-mqtt \
 		            --host=$(HOST) && \
 		make && \
 		make install
