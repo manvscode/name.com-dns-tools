@@ -155,7 +155,7 @@ int main( int argc, char* argv[] )
 			}
 			else
 			{
-				console_fg_color_256( stderr, CONSOLE_COLOR256_RED );
+				console_fg_color_8( stderr, CONSOLE_COLOR8_RED );
 				printf( "\n" );
 				fprintf( stderr, "ERROR: " );
 				console_reset( stderr );
@@ -303,28 +303,28 @@ done:
 
 void banner( void )
 {
-	console_fg_color_256( stdout, CONSOLE_COLOR256_BRIGHT_GREEN );
+	console_fg_color_8( stdout, CONSOLE_COLOR8_BRIGHT_GREEN );
 	printf("  _ __   __ _ _ __ ___   ___ ");
 	console_reset( stdout );
 	printf("   ___ ___  _ __ ___  \n");
 
-	console_fg_color_256( stdout, CONSOLE_COLOR256_BRIGHT_GREEN );
+	console_fg_color_8( stdout, CONSOLE_COLOR8_BRIGHT_GREEN );
 	printf(" | '_ \\ / _` | '_ ` _ \\ / _ \\");
 	console_reset( stdout );
 	printf("  / __/ _ \\| '_ ` _ \\ \n");
 
 
-	console_fg_color_256( stdout, CONSOLE_COLOR256_BRIGHT_GREEN );
+	console_fg_color_8( stdout, CONSOLE_COLOR8_BRIGHT_GREEN );
 	printf(" | | | | (_| | | | | | |  __/");
 	console_reset( stdout );
 	printf(" | (_| (_) | | | | | |\n");
 
-	console_fg_color_256( stdout, CONSOLE_COLOR256_BRIGHT_GREEN );
+	console_fg_color_8( stdout, CONSOLE_COLOR8_BRIGHT_GREEN );
 	printf(" |_| |_|\\__,_|_| |_| |_|\\___|");
 	console_reset( stdout );
 	printf("(_)___\\___/|_| |_| |_|\n");
 
-	console_fg_color_256( stdout, CONSOLE_COLOR256_YELLOW );
+	console_fg_color_8( stdout, CONSOLE_COLOR8_YELLOW );
 	printf( "               Dynamic DNS Updater\n");
 	console_reset( stdout );
 }
@@ -356,14 +356,14 @@ void about( int argc, char* argv[] )
 
 	printf( "If you don't already have a Name.com API token, then you may apply for\n" );
 	printf( "one at: ");
-	console_fg_color_256( stdout, CONSOLE_COLOR256_BRIGHT_MAGENTA );
+	console_fg_color_8( stdout, CONSOLE_COLOR8_BRIGHT_MAGENTA );
 	printf( "http://name.com/reseller" );
 	console_reset( stdout );
 	printf( "\n\n" );
 
 	printf( "If you found this utility useful, please consider making a donation\n" );
 	printf( "of bitcoin to: " );
-	console_fg_color_256( stdout, CONSOLE_COLOR256_BRIGHT_MAGENTA );
+	console_fg_color_8( stdout, CONSOLE_COLOR8_BRIGHT_MAGENTA );
 	printf( "3A5M1m2BNSBgo9V7B8wf6VtWQDMMgp5abZ" );
 	console_reset( stdout );
 	printf( "\n\n" );
