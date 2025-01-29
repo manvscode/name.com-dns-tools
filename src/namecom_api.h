@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 by Joseph A. Marrero. http://www.joemarrero.com/
+ * Copyright (C) 2016-2025 by Joseph A. Marrero. http://www.joemarrero.com/
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal

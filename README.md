@@ -4,7 +4,7 @@ DNS tools for name.com is a DNS record management utility (the _namecom_dns_ com
 ## Donate, if you found this tool useful
 
 The development of these utilities took numerous hours of development and testing.  If you found that they
-are useful to you, then please consider making a donation of bitcoin to **3A5M1m2BNSBgo9V7B8wf6VtWQDMMgp5abZ**
+are useful to you, then please consider making a donation of bitcoin to: **bc1qezh0x9324px8aszr09xmmtxqe7ttd7ftumayhv**
 
 All donations help cover maintenance costs.
 
@@ -137,7 +137,7 @@ Record updated.
 
 # License
 
-	Copyright (C) 2016 by Joseph A. Marrero. http://www.joemarrero.com/
+	Copyright (C) 2016-2025 by Joseph A. Marrero. http://www.joemarrero.com/
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
